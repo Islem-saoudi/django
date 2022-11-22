@@ -1,0 +1,8 @@
+{
+    "python.defaultInterpreterPath": "/Users/salouma/Desktop/Projects/Python/Django3/env/bin/python3",
+    "django.snippets.exclude": [
+    
+        "cms",
+        "wagtail"
+    ],
+}
