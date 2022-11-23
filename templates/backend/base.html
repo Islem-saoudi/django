@@ -113,13 +113,20 @@
                     >{% translate "Dashboard" %}</a
                   >
                 </li>
-                <li><a class="dropdown-item" href="{% url 'profile' %}"><i
-                  class="fa-solid fa-gear text-black-50 me-2"></i>{% translate "Profile settings" %}</a></li>
                 <li>
                   <a
-                    href="#"
+                    href="{% url 'confirmation-client' %}"
                     class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                    >{% translate "Password edit" %}
+                    >{% translate "Profile settings" %}
+                  </a>
+                </li>
+                
+                <li>
+                  <a
+                    href="{% url 'account_change_password' %}"
+                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                    >
+                    {% translate "Password edit" %}
                   </a>
                 </li>
                 <li>

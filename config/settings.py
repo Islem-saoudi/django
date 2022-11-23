@@ -157,7 +157,8 @@ ACCOUNT_LOGOUT_ON_GET = True
 ACCOUNT_FORMS = {
     'login': 'backend.forms.CustomLoginForm',
     'signup': 'backend.forms.CustomSignupForm',
-    'reset_password': 'backend.forms.CustomResetPasswordForm'
+    'reset_password': 'backend.forms.CustomResetPasswordForm',
+    'change_password': 'backend.forms.CustomPasswordChangeForm'
 }
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
