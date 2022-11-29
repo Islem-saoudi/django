@@ -1,9 +1,21 @@
 {% extends 'backend/base.html' %}
 {% load static i18n %}
+{% block title %}{% translate "Profile" %}{% endblock title %}
 {% block content %}
 
 <form method="POST" enctype="multipart/form-data">
   {% csrf_token %}
+  <div class="py-3 px-4">
+    <span class="block text-4xl text-gray-900 dark:text-white"
+      >Hello {{user.username}}</span
+    >
+    <span class="block text-xl text-gray-900 dark:text-white"
+      >Welcome back !</span
+    >
+
+  </div>
+  <hr class="my-6 mx-4 w-70 h-1 bg-gray-300 rounded border-0 md:my-10 dark:bg-gray-300">
+
   <div class="grid col-1 mx-auto max-w-7xl gap-6 mb-6 md:grid-cols-1 lg:grid-cols-2 md:mt-10">
 
     <div class="justify-center p-2 md:p-4">
@@ -51,15 +63,15 @@
         <p><small class="text-sm text-red-700 dark:text-red-500">{{ error }}</small></p>
       {% endfor %}
     </div>
-    <div class="order-2 lg:order-3 justify-center p-2 md:p-4">
+    {% comment %} <div class="order-2 lg:order-3 justify-center p-2 md:p-4">
       <label for="id_Validated_client" class="block mb-2 text-lg font-medium text-gray-900 dark:text-gray-300">
         {% translate "Validated client: " %}
-      </label>
+      </label> 
       <div class="mx-auto text-gray-800 dark:text-gray-300  ">{{form2.Validated_client}}</div>
       {% for error in form2.Validated_client.errors %}
         <p><small class="text-sm text-red-700 dark:text-red-500">{{ error }}</small></p>
       {% endfor %}
-    </div>
+    </div> {% endcomment %}
   </div>
   <div class="mx-auto max-w-7xl">
     <button type="submit"

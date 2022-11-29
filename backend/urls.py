@@ -10,13 +10,6 @@ urlpatterns = [
 
 
 
-
-
-
-
-
-
-
     path('marketing_form/', views.MarketingFormViews.as_view(), name='marketing_f'),
     path('marketing_list/', views.MarketingListViews.as_view(), name='marketing_l'),
     path('technical_form/', views.TechnicalFormViews.as_view(), name='technical_f'),

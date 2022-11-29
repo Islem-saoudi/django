@@ -47,7 +47,7 @@ def ClientProfileView(request):
             # recipient = User.objects.filter(is_superuser=True)
             # message = _('New cusomer account is waiting for confirmation')
             # notify.send(sender=sender, recipient=recipient, verb='Message',
-            #             description='New cusomer account is waiting for confirmation', level='light')
+            # description='New cusomer account is waiting for confirmation', level='light')
             return redirect('dashboard')
     else:
         form1 = UserSetting()

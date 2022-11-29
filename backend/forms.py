@@ -42,11 +42,6 @@ class CustomPasswordChangeForm(ChangePasswordForm):
 
         return user
     
-    
-    
-
-
-
 
 class PasswordChangeForm(PasswordChangeForm):
     class Meta:
@@ -54,10 +49,7 @@ class PasswordChangeForm(PasswordChangeForm):
         fields = '__all__'
     
     def __init__(self, *args, **kwargs):
-        super(PasswordChangeForm, self).__init__(*args, **kwargs)
-        # self.label_suffix['old_password'].widget.attrs.update({'class': 'text-white'})
-        # self.old_password.label_suffix = ('text-white')
-        # self.fields['id_old_password'].widget.attrs.update({'class': 'text-white'})
+        super(PasswordChangeForm, self).__init__(*args, **kwargs)       
         self.fields['old_password'].widget.attrs.update({'placeholder': _('Old password'),'class': 'bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 my-4'})
         self.fields['new_password1'].widget.attrs.update({'placeholder': _('New password'),'class': 'bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 my-4'}) 
         self.fields['new_password2'].widget.attrs.update({'placeholder': _('New password confirmation'),'class': 'bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 my-4'}) 
